@@ -1,4 +1,36 @@
-<h5>Referencias y Dependientes</h5>
-<input type="text" class="form-control mb-3" placeholder="Referencia personal (Nombre y teléfono)" required>
-<input type="text" class="form-control mb-3" placeholder="Referencia laboral (Nombre y teléfono)" required>
-<input type="number" class="form-control mb-3" placeholder="Número de dependientes económicos" required>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referencias y Dependientes - Banco MX</title>
+  <link rel="stylesheet" href="../estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Banco MX</h1>
+    <p>Solicita tu tarjeta de crédito</p>
+  </header>
+  <main>
+    <section>
+      <h2>Referencias y Dependientes</h2>
+      <form id="form-referencias-dependientes" action="../index.html">
+        <label for="referencia-nombre">Nombre de referencia:</label>
+        <input type="text" id="referencia-nombre" name="referencia-nombre" required>
+
+        <label for="referencia-telefono">Teléfono de referencia:</label>
+        <input type="tel" id="referencia-telefono" name="referencia-telefono" required>
+
+        <label for="dependientes">Número de dependientes económicos:</label>
+        <input type="number" id="dependientes" name="dependientes" required>
+
+        <button type="submit">Finalizar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Banco MX. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

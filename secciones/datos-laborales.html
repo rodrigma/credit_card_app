@@ -1,5 +1,39 @@
-<h5>Datos Laborales</h5>
-<input type="text" class="form-control mb-3" placeholder="Empresa donde labora" required>
-<input type="text" class="form-control mb-3" placeholder="Puesto" required>
-<input type="number" class="form-control mb-3" placeholder="Ingreso mensual (MXN)" required>
-<input type="number" class="form-control mb-3" placeholder="Antigüedad laboral (años)" required>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Laborales - Banco MX</title>
+  <link rel="stylesheet" href="../estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Banco MX</h1>
+    <p>Solicita tu tarjeta de crédito</p>
+  </header>
+  <main>
+    <section>
+      <h2>Datos Laborales</h2>
+      <form id="form-datos-laborales" action="domicilio-personal.html">
+        <label for="empresa">Nombre de la empresa:</label>
+        <input type="text" id="empresa" name="empresa" required>
+
+        <label for="puesto">Puesto:</label>
+        <input type="text" id="puesto" name="puesto" required>
+
+        <label for="ingresos">Ingresos mensuales:</label>
+        <input type="number" id="ingresos" name="ingresos" required>
+
+        <label for="antiguedad">Antigüedad en meses:</label>
+        <input type="number" id="antiguedad" name="antiguedad" required>
+
+        <button type="submit">Siguiente</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Banco MX. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

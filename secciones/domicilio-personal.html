@@ -1,6 +1,45 @@
-<h5>Domicilio Personal</h5>
-<input type="text" class="form-control mb-3" placeholder="Calle y número" required>
-<input type="text" class="form-control mb-3" placeholder="Colonia" required>
-<input type="text" class="form-control mb-3" placeholder="Ciudad/Municipio" required>
-<input type="text" class="form-control mb-3" placeholder="Estado" required>
-<input type="number" class="form-control mb-3" placeholder="Código postal" required>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domicilio Personal - Banco MX</title>
+  <link rel="stylesheet" href="../estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Banco MX</h1>
+    <p>Solicita tu tarjeta de crédito</p>
+  </header>
+  <main>
+    <section>
+      <h2>Domicilio Personal</h2>
+      <form id="form-domicilio-personal" action="domicilio-laboral.html">
+        <label for="calle">Calle:</label>
+        <input type="text" id="calle" name="calle" required>
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero" required>
+
+        <label for="colonia">Colonia:</label>
+        <input type="text" id="colonia" name="colonia" required>
+
+        <label for="codigo-postal">Código postal:</label>
+        <input type="text" id="codigo-postal" name="codigo-postal" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required>
+
+        <button type="submit">Siguiente</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Banco MX. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

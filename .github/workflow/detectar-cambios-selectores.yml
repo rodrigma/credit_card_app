@@ -1,0 +1,52 @@
+name: Detectar Cambios en Selectores
+
+on:
+  push:
+    branches:
+      - Rod # o la rama que utilices
+
+jobs:
+  detectar-cambios:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2 # para tener el commit anterior y actual
+
+    - name: Obtener cambios en archivos HTML
+      id: cambios
+      run: |
+        # Obtener archivos HTML modificados
+        git diff --name-only HEAD~1 HEAD '*.html' > archivos_modificados.txt
+
+        # Guardar la lista como variable de salida
+        echo "archivos=$(cat archivos_modificados.txt | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+    - name: Mostrar diferencias detalladas
+      if: steps.cambios.outputs.archivos != ''
+      run: |
+        for archivo in ${{ steps.cambios.outputs.archivos }}; do
+          echo "🔍 Cambios detectados en el archivo: $archivo"
+          git diff HEAD~1 HEAD -- $archivo
+        done
+
+    - name: Enviar notificación por correo electrónico (Opcional)
+      if: steps.cambios.outputs.archivos != ''
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: "[Alerta] Cambios en selectores HTML detectados"
+        body: |
+          Se han detectado cambios en los siguientes archivos HTML:
+          ${{ steps.cambios.outputs.archivos }}
+
+          Por favor, revisa el repositorio para verificar si es necesario actualizar los selectores en tus pruebas Selenium.
+
+          Commit: ${{ github.event.head_commit.url }}
+        to: tu_correo@example.com
+        from: GitHub Actions <rodrigomtz85@gmail.com>

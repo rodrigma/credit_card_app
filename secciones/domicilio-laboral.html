@@ -1,6 +1,45 @@
-<h5>Domicilio Laboral</h5>
-<input type="text" class="form-control mb-3" placeholder="Calle y número" required>
-<input type="text" class="form-control mb-3" placeholder="Colonia" required>
-<input type="text" class="form-control mb-3" placeholder="Ciudad/Municipio" required>
-<input type="text" class="form-control mb-3" placeholder="Estado" required>
-<input type="number" class="form-control mb-3" placeholder="Código postal" required>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domicilio Laboral - Banco MX</title>
+  <link rel="stylesheet" href="../estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Banco MX</h1>
+    <p>Solicita tu tarjeta de crédito</p>
+  </header>
+  <main>
+    <section>
+      <h2>Domicilio Laboral</h2>
+      <form id="form-domicilio-laboral" action="referencias-dependientes.html">
+        <label for="calle-laboral">Calle:</label>
+        <input type="text" id="calle-laboral" name="calle-laboral" required>
+
+        <label for="numero-laboral">Número:</label>
+        <input type="text" id="numero-laboral" name="numero-laboral" required>
+
+        <label for="colonia-laboral">Colonia:</label>
+        <input type="text" id="colonia-laboral" name="colonia-laboral" required>
+
+        <label for="codigo-postal-laboral">Código postal:</label>
+        <input type="text" id="codigo-postal-laboral" name="codigo-postal-laboral" required>
+
+        <label for="ciudad-laboral">Ciudad:</label>
+        <input type="text" id="ciudad-laboral" name="ciudad-laboral" required>
+
+        <label for="estado-laboral">Estado:</label>
+        <input type="text" id="estado-laboral" name="estado-laboral" required>
+
+        <button type="submit">Siguiente</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Banco MX. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

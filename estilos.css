@@ -1,80 +1,137 @@
-/* Estilos generales del cuerpo */
+/* Estilos generales */
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #212529;
-}
-
-/* Estilos para el contenedor principal */
-.container {
-    max-width: 700px;
-}
-
-/* Estilos para la tarjeta principal */
-.card {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Estilos para el título de la tarjeta */
-.card-title {
-    color: #343a40;
-    font-weight: 600;
-}
-
-/* Estilos para los títulos de cada sección */
-h5 {
-    color: #0d6efd;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-/* Estilos para los inputs y selects */
-.form-control, .form-select {
-    border-radius: 8px;
-    border: 1px solid #ced4da;
-    padding: 10px;
-    font-size: 15px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.form-control:focus, .form-select:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
-}
-
-/* Estilos para los botones */
-.btn {
-    width: 150px;
-    border-radius: 8px;
-    font-weight: 500;
-}
-
-.btn-primary {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-
-.btn-success {
-    background-color: #198754;
-    border-color: #198754;
-}
-
-/* Ajustes para botones deshabilitados */
-.btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/* Estilos para mensajes de error (opcional, si agregas validaciones) */
-.error-message {
-    color: #dc3545;
-    font-size: 14px;
+    font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f4f4f4, #e8e8e8); /* Gradiente de fondo */
+    color: #333;
+  }
+  
+  header {
+    background: linear-gradient(to right, #004aad, #0073e6); /* Gradiente en el header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem; /* Tamaño más grande para el título */
+  }
+  
+  header p {
     margin-top: 5px;
-}
+    font-size: 1rem;
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section {
+    background: white;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
+  }
+  
+  section:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  }
+  
+  h2 {
+    color: #004aad;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #004aad; /* Color más vivo al enfocarse */
+    outline: none;
+  }
+  
+  button {
+    background: linear-gradient(to right, #004aad, #0073e6); /* Gradiente en el botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #00337a, #005bb5); /* Gradiente más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento */
+  }
+  
+  a.btn-iniciar {
+    display: inline-block;
+    background: linear-gradient(to right, #004aad, #0073e6); /* Gradiente en el botón de inicio */
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  a.btn-iniciar:hover {
+    background: linear-gradient(to right, #00337a, #005bb5); /* Gradiente más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004aad;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra en el footer */
+  }
+  
+  /* Agregar animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  section {
+    animation: fadeIn 0.5s ease;
+  }
+  
